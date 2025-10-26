@@ -1,0 +1,38 @@
+JAVA17 INSTALLATION
+==============================================
+https://www.oracle.com/in/java/technologies/downloads/#jdk17-windows
+THEN GO TO JDK17
+THEN CLICK ON X64 Installer IT WILL DOWNLOAD EXEC FILE
+CLICK ON EXE FILE AND INSTALL IT
+===================================================
+MYSQL INSTALLATION
+===============================================
+https://www.youtube.com/watch?v=0AF0w_OJyDs
+===============================================
+MYSQL INSTALLATION IN MAC OS
+==============================================================
+https://www.youtube.com/watch?v=ODA3rWfmzg8
+===============================================================
+TOMCAT INSTALLATION
+================================================
+https://tomcat.apache.org/
+THEN CLICK ON TOMCAT9 LINK ON THE LEFT SIDE
+GO DOWN IN THE CORE SECTION
+DOWNLOAD 64-bit windows zip
+CREATE A TOMCAT FOLDER IN ANY DRIVE
+COPY THE JAR FILE IN THE TOMCAT FOLDER
+AND EXTRACT IT
+=================================================
+ECLIPSE IDE INSTALLATION
+================================================
+https://www.youtube.com/watch?v=Lh0VNWoieDQ
+===============================================
+DYNAMIC WEB PROJECT ADDED IN STS
+===============================================================
+https://www.youtube.com/watch?v=j5n3ejqNSWk
+===================================================================
+
+POSTGRESQL INSTALLATION
+====================================================
+https://www.youtube.com/watch?v=GpqJzWCcQXY
+===================================================
