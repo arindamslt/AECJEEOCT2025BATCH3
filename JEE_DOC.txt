@@ -1,3 +1,94 @@
 GITHUB LINK
 ============================================================
 https://github.com/arindamslt/AECJEEOCT2025BATCH3.git
+======================================================================
+DATE:30.10.2025
+========================================================================
+ADVANCED JAVA
+========================================================================
+IT IS CALLED ALSEO JEE
+JEE
+======================================================================
+JAVA ENTERPRISE EDITION
+======================================================================
+TYPES OF APPLICATION
+====================================================================
+1.DESKTOP APPLICATION OR STAND ALONE APPLICATION
+2.WEB APPLICATION
+3.MOBILE APPLICATION
+4.MACHINE LEARNING APPLICATION
+========================================================================
+HTML
+===========================================================================
+HYTER TEXT MARKUP LANGUAGE
+===============================================================
+PURPOSE
+===========================================================================================
+TO MAKE STRUCTURE OF THE CONTENT OF THE WEB PAGE
+=============================================================================
+WEBPAGE
+===============================================================
+IT IS AN ELECTRONIC PAGE TO DISPLAY SOME CONTENTS
+HTML IS NOTHING BUT A COLLECTION OF ELEMENTS
+==================================================================
+LIST
+HEADING
+PARAGRAPH
+IMAGE
+TABLE
+IFRAME
+ELEMENT ARE REPRESENTED BY THREE TAGS
+=======================================
+OPENING TAG
+CLOSING TAG
+SELF CLOSING TAG
+FOR EX:
+============================================================
+<h2>    WELCOME    </H2>
+OPENING CONTENTS        CLOSING TAG
+TAG
+<img/>===SELF CLOSING TAG
+================================================================
+A LANGUAGE IS CONSIDERED TO BE MARKUP IF THERE IS A TAG,ATTRIBUTE AND PARAMETERS ARE THERE
+LIST ELEMENT
+===================================================================
+THREE TYPES
+=========================================================
+UNORDERED LIST
+ORDERED LIST
+DEFINATION LIST
+================================================================
+TABLE ELEMENT
+============================================================
+ANCHOR TAG
+==============================================================
+INTERNAVIGATION
+INTRA NAVIGATION
+===================================================================================
+CSS
+============================================
+CASCADDING STYLE SHEET
+IT IS ALSO CALLED STYLING LANGUAGE
+PURPOSE
+===================================================
+DESIGN THE HTML PAGE
+PROPERTIES
+======================================================
+KEY AND VALUE PAIR
+color="red";
+TYPES OF CSS
+=======================================================
+INLINE
+INTERNAL
+EXTERNAL
+==============================================================
+
+
+
+
+
+
+
+
+
+
