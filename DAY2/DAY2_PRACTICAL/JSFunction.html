@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+	//NORMAL FUNCTION
+	function fn1()
+     {
+		 document.write("NORMAL FUNCTION");
+	 }
+	 fn1();
+	 document.write("<br/>");
+	 //PARAMETERISED FUNCTIOn
+	 function fn2(x,y)
+	 {
+		 document.write(x+y);
+	 }
+	 fn2(10,10.5);
+	  document.write("<br/>");
+	 function fn3(x,y)
+	 {
+		 return(x*y);
+	 }
+	 var res=fn3(10,20);
+	 document.write(res);
+	 function fn4(f)
+	 {
+		 f();
+	 }
+	 fn4(function(){
+		   document.write("<br/>");
+		 var city='KOLKATA';
+		 document.write(city);
+	 })
+	 //FUNCTION EXPRESSION
+	 var result=function(){
+		 var dist='KOLKATA';
+		  document.write(dist);
+	 }
+	 result();
+</script>
+</head>
+<body>
+
+</body>
+</html>

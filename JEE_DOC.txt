@@ -88,6 +88,67 @@ TAG VALUE
 ID VALUE
 CLASS VALUE
 ====================================================================
+DATE:31.10.2025
+==========================================================================
+TEXT DECORATION
+TEXT DECRATION STYLE
+TEXT DECORATION COLOR
+TEXT TRANSFORM
+MARGIN PADDING
+BORDER
+BOX-SHADOW
+TEXT-SHADOW
+LAYOUT
+NAV BAR
+========================================================
+Nav.html
+Nav.css
+======================================================
+BOOTSTRAP
+========================================================================
+IT IS POWERFULL,SELF PACKED,EXTENSIBLE FRONT END TOOL
+PURPOSE
+===============================================
+FASTER DESIGN
+RESPONSIVE DESIGN
+============================================================================
+JAVASCRIPT
+===========================================================================
+IT IS A PROGRAMMING LANGUAGE.NOW JAVASCRIPT CAN COMMUNICATE WITH DATABASE.
+AND ALSO WEB SERVER AND APPLICATION SERVER
+PURPOSE
+===================================================
+1.DYNAMIC USER INTERFACE
+2.CAN COMMUNICATE FRONT END AND BACK END APPLICATION
+3.PROVIDE CLIENT SIDE AND SERVER SIDE VALIDATION
+===========================================================
+AREAS
+==============================================================
+1.STAND ALONE APPLICATION
+2.WEB APPLICATION
+3.MOBILE APPS
+4.MACHINE LEARNING APPS
+===================================================================
+VARIABLE
+====================================================================
+PRIMITIVE TYPES:string,number,bigint,bytes,symbol,null,undefined
+NON PRIMITIVE TYPES:OBJECT
+=======================================================================
+TYPES OF FUNCTION
+============================
+1.NORMAL OR CONCRETE FUNCTION
+2.PARAMERISED FUNCTION
+3.FUNCTION WITH RETURN STATEMENT
+4.ANNONYMOUS FUNCTION
+5.HIGHER ORDER FUNCTION
+6.CALLBACK FUNCTION
+7.ARROW FUNCTION
+FUNCTION EXPRESSION
+DOM
+=================================
+DOCUMENT OBJECT MODEL
+
+
 
 
 
