@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>EVENT HANDELLING</title>
+<script>
+	function changeH2()
+	{
+		var h2Ref=document.getElementById("domh");
+		h2Ref.innerText="DOM MANIPULATION BY JAVASCRIPT";
+	}
+	function changeP()
+	{
+		alert("HELLO");
+		var pRef= document.getElementById("domp");
+		pRef.innerText="WELCOME TO JAVASCRIPT";
+	}
+	
+</script>
+</head>
+<body>
+<div>
+	<h2 id="domh">DOM</h2>
+	<p id="domp">dhasdjhasjkdsahdhjasdhaskdkajshakshakshak</p>
+	<button onclick="changeH2()">CHANGEH2</button>
+	<button onclick="changeP()">CHANGEP</button>
+</div>
+</body>
+</html>

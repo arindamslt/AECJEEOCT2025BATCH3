@@ -147,8 +147,127 @@ FUNCTION EXPRESSION
 DOM
 =================================
 DOCUMENT OBJECT MODEL
-
-
+===================================================================================
+DATE:01.11.2025
+======================================================================================
+DBMS RBMS
+==========================================
+DBMS
+==================================
+DATABASE MANAGEMENT SYSTEM
+RELATIONAL DATABASE MANAGEMENT SYSTEM
+DATABASE IS COLLECTION OF INTERELATED DATA OR TABLES
+DBMS/RDBMS===DATABASE+SQL(STRUCTURED QUERY LANGUAGE)
+JAVA
+==================================================
+HLL
+ARRAY
+HOW PART
+WHAT PART
+SQL
+====================
+NON PROCEDURAL LANGUAGE
+HOW PART IS NOT KNOWN TO US
+WHAT PART IS KNOWN TO US
+EX:SELECT * FROM STUDENT;
+TYPES OF SQL COMMANDS
+=============================================================
+1.DDL==DATA DEFINATION LANGUAGE
+===============================================
+CREATE,ALTER,RENAME,TRUNCATE,DROP,PURGE
+2.DML===DATA MANIPULATION LANGUAGE
+============================================
+INSERT,UPDATE,DELETE,MERGE
+3.DATA RETRIEVAL
+================================
+SEELCT
+4.TCL==TRANSACTION CONTROL LANGUAGE
+========================================
+COMMIT,ROLLBACK,SAVEPOINT
+5.DCL==DATA CONTROL LANGUAGE
+==============================
+GRANT,REVOKE
+RDBMS KIND OF SOFTWARE
+==========================
+ORACLE
+MYSQL
+SQLSERVER
+================================================
+MYSQL
+=========================================================
+LOGIN MYSQL
+====================================================
+1.COMMAND PRMPT
+2.MYSQL COMMAND LINE CLIENT
+3.MYSQL WORKBENCH
+DATA TYPES IN MYSQL
+==========================
+VARCHAR
+CHAR
+INT
+DECIMAL
+DATE=============YYYY-MM-DD
+TIMESTAMP
+SNAME VARCHAR(10)==============ARUP
+SNAME VARCHAR
+SNAME CHAR(10_===========ARUP
+CONSTRAINT
+========================================
+BEFORE INSERTING ANY DATA INTO TABLE YOU HAVE STATISFY SOME RULES AND REGULATIONS
+TYPES OF CONSTRAINT
+===================================
+1.PRIMARY KEY=====IT DOES NOT ACCEPT NULL VALUES AND DUPLICATE VALUE
+2,UNIQUE KEY=====IT ACCEPT THE NULL VALUE BUT DOES NOT ACCEPT DUPLICATE VALUE
+3.NOT NULL==========IT CAN'T ACCEPT NULL VALUE
+4,CHECK CONSTRAINT==IT ACCEPT PREDEFINED VALUES
+EX:GENDER==M,F
+AGE:18-58
+5.FOREIGN KEY==OTHER TABLE PRIMARY KEY VALUE ONLY  SUPPORTED
+======================================================================================
+JDBC
+====================================================================================
+JAVA DATABASE CONNECTIVITY
+import java.sql.*;
+LIST OF INTERFACES
+=========================================================
+Connection============Establish the connection
+Statement=============EXECUTE THE QUERY
+PreparedStatement===EXECUTE PRECOMPLED SQL STATEMENT
+CallableStatement=====EXECUTE PROCEDURE
+ResultSet=============STORE THE DATA INTO RESULTSET
+ResultSetmetaData=====DETAILSINFORMATION OF RESULTSET
+DatabaseMetaData
+CLASSES
+=======================
+DriverManager====REGISTER AND LOAD THE JDBC DRIVER
+Date=====DEALS WITH DATE DATA TYPE
+Timestamp===DEALS WITH DATE AND TIME
+EXCEPTION HANDLE HERE
+=======================================
+ClassNotFoundException
+SQLException
+TYPES OF JDBC DRIVER
+===================================
+TYPE-I DRIVER
+TYPE-II DRIVER
+TYPE-III DRIVER
+TYPE-IV DRIVER==CALLED THIN DRIVER
+=====================================================================
+DATABASE:JEEDBSS
+CREATE TABLE PRODUCT
+(PID VARCHAR(10),
+ PNAME VARCHAR(25) NOT NULL,
+ PQTY  DECIMAL,
+ PRICE DECIMAL,
+ CONSTRAINT PRODUCT_PID_PK PRIMARY KEY(PID)
+);
+INSERT INTO PRODUCT VALUES('P1','TV',5,25000.00);
+INSERT INTO PRODUCT VALUES('P2','TAB',6,22000.00);
+SELECT * FROM PRODUCT;
+=======================================================================
+STEPS OF COMMUNICATION
+=============================================================================
+STEP1.import java.sql.*;
 
 
 

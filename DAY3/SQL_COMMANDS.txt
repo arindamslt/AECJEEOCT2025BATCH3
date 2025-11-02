@@ -1,0 +1,328 @@
+mysql> CREATE DATABASE JEEDBSS;
+Query OK, 1 row affected (0.01 sec)
+USE JEEDBSS;
+SHOW TABLES;
+mysql> CREATE TABLE CUSTOMER
+    -> (CID VARCHAR(10),
+    ->  CNAME VARCHAR(25),
+    ->   CPHNO VARCHAR(10)
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> DESC CUSTOMER;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| CID   | varchar(10) | YES  |     | NULL    |       |
+| CNAME | varchar(25) | YES  |     | NULL    |       |
+| CPHNO | varchar(10) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+INSERT INTO CUSTOMER VALUES('C1','ANNANYA','67777');
+mysql> SELECT * FROM CUSTOMER;
++------+---------+-------+
+| CID  | CNAME   | CPHNO |
++------+---------+-------+
+| C1   | ANNANYA | 67777 |
++------+---------+-------+
+1 row in set (0.00 sec)
+CREATE TABLE DEPT
+(DEPTNO VARCHAR(10),
+ DNAME VARCHAR(25) NOT NULL,
+ LOC   VARCHAR(25) NOT NULL,
+ CONSTRAINT DEPT_DEPTNO_PK PRIMARY KEY(DEPTNO)
+);
+mysql> DESC DEPT;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DEPTNO | varchar(10) | NO   | PRI | NULL    |       |
+| DNAME  | varchar(25) | NO   |     | NULL    |       |
+| LOC    | varchar(25) | NO   |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+INSERT INTO DEPT VALUES('10','MKTG','KOLKATA');
+INSERT INTO DEPT VALUES('20','FINANCE','MUMBAI');
+INSERT INTO DEPT VALUES('30','IT',DELHI');
+INSERT INTO DEPT VALUES('40','OPERATIONS','CHENNAI');
+
+mysql> SELECT * FROM DEPT;
++--------+------------+---------+
+| DEPTNO | DNAME      | LOC     |
++--------+------------+---------+
+| 10     | MKTG       | KOLKATA |
+| 20     | FINANCE    | MUMBAI  |
+| 30     | IT         | DELHI   |
+| 40     | OPERATIONS | CHENNAI |
+============================================================================================
+CREATE TABLE EMP
+(EID VARCHAR(10),
+ ENAME VARCHAR(25) NOT NULL,
+ JOB   VARCHAR(25),
+ SAL    DECIMAL,
+ COMM   DECIMAL,
+ HIREDATE  DATE,
+ DEPTNO VARCHAR(10),
+ CONSTRAINT EMP_EID_PK PRIMARY KEY(EID)
+);
+mysql> DESC EMP;
++----------+---------------+------+-----+---------+-------+
+| Field    | Type          | Null | Key | Default | Extra |
++----------+---------------+------+-----+---------+-------+
+| EID      | varchar(10)   | NO   | PRI | NULL    |       |
+| ENAME    | varchar(25)   | NO   |     | NULL    |       |
+| JOB      | varchar(25)   | YES  |     | NULL    |       |
+| SAL      | decimal(10,0) | YES  |     | NULL    |       |
+| COMM     | decimal(10,0) | YES  |     | NULL    |       |
+| HIREDATE | date          | YES  |     | NULL    |       |
+| DEPTNO   | varchar(10)   | YES  |     | NULL    |       |
++----------+---------------+------+-----+---------+-------+
+================================================================================
+
+INSERT INTO EMP VALUES('E1','SUMAN','CLERK',25000,2000,CURRENT_DATE,'10');
+INSERT INTO EMP VALUES('E2','ALOKE','CLERK',27000,2500,CURRENT_DATE,'20');
+INSERT INTO EMP VALUES('E3','AYAN','MANAGER',50000,5000,'2024-07-25','10');
+INSERT INTO EMP VALUES('E4','JAYANTA','MANAGER',80000,10000,'2024-06-24','20');
+INSERT INTO EMP VALUES('E5','JYOTI','ANALYST',65000,4000,'2024-05-20','30');
+INSERT INTO EMP VALUES('E6','RUPALI','ANALYST',60000,4500,'2024-05-15','20');
+mysql> SELECT * FROM EMP;
++-----+---------+---------+-------+-------+------------+--------+
+| EID | ENAME   | JOB     | SAL   | COMM  | HIREDATE   | DEPTNO |
++-----+---------+---------+-------+-------+------------+--------+
+| E1  | SUMAN   | CLERK   | 25000 |  2000 | 2025-11-01 | 10     |
+| E2  | ALOKE   | CLERK   | 27000 |  2500 | 2025-11-01 | 20     |
+| E3  | AYAN    | MANAGER | 50000 |  5000 | 2024-07-25 | 10     |
+| E4  | JAYANTA | MANAGER | 80000 | 10000 | 2024-06-24 | 20     |
+| E5  | JYOTI   | ANALYST | 65000 |  4000 | 2024-05-20 | 30     |
+| E6  | RUPALI  | ANALYST | 60000 |  4500 | 2024-05-15 | 20     |
++-----+---------+---------+-------+-------+------------+--------+  
+QUERY
+============================================================================
+DATA RETRIEVAL
+==========================================================================
+ALL DATA
+=======================================
+SELECT * FROM EMP;
+SPECIFIC COLUMN DATA
+========================================
+SELECT ENAME,JOB,SAL FROM EMP;
+RESTRICTION OF DATA
+==========================================================
+IT IS DONE BY WHERE CLAUSE
+SELECT * FROM EMP WHERE ENAME='SUMAN';
+SELECT * FROM EMP WHERE JOB='CLERK';
+==========================================================
+IN OPERATOR
+=====================================================
+SELECT * FROM EMP WHERE JOB IN('CLERK','ANALYST');
+SELECT * FROM EMP WHERE JOB NOT IN('CLERK','ANALYST');
+=======================================================
+AND OPERATOR
+=================================================
+SELECT * FROM EMP WHERE JOB='CLERK' AND SAL > 25000;
+==================================================
+OR OPERATOR
+SELECT * FROM EMP WHERE JOB='CLERK' OR SAL > 25000;
+=======================================================
+LIKE OPERATOR
+===========================================================
+SELECT * FROM EMP WHERE ENAME LIKE 'S%';
+SELECT * FROM EMP WHERE ENAME LIKE '_Y%';
+SELECT * FROM EMP WHERE ENAME LIKE '%I';
+SELECT * FROM EMP WHERE ENAME LIKE '%A%';
+=============================================================
+ARITHMETIC OPERATOR
+==================================================================
+SELECT ENAME,JOB,SAL,COMM,SAL+COMM FROM EMP;
+---------+---------+-------+-------+----------+
+| ENAME   | JOB     | SAL   | COMM  | SAL+COMM |
++---------+---------+-------+-------+----------+
+| SUMAN   | CLERK   | 25000 |  2000 |    27000 |
+| ALOKE   | CLERK   | 27000 |  2500 |    29500 |
+| AYAN    | MANAGER | 50000 |  5000 |    55000 |
+| JAYANTA | MANAGER | 80000 | 10000 |    90000 |
+| JYOTI   | ANALYST | 65000 |  4000 |    69000 |
+| RUPALI  | ANALYST | 60000 |  4500 |    64500 |
+COLUMN ALIAS
+=========================================================
+SELECT ENAME,JOB,SAL,COMM,SAL+COMM TOTALSAL FROM EMP;
+=====================================================
+SORTING DATA
+===========================================================
+ASCENDING
+DESCENDING
+SELECT * FROM EMP ORDER BY ENAME;
+SELECT * FROM EMP ORDER BY SAL DESC;
+FIND OUT TWO TOP MOST HIGTEST SALARY EARNING PERSON DETAILS
+==================================================================
+mysql> SELECT * FROM EMP ORDER BY SAL DESC LIMIT 2;
++-----+---------+---------+-------+-------+------------+--------+
+| EID | ENAME   | JOB     | SAL   | COMM  | HIREDATE   | DEPTNO |
++-----+---------+---------+-------+-------+------------+--------+
+| E4  | JAYANTA | MANAGER | 80000 | 10000 | 2024-06-24 | 20     |
+| E5  | JYOTI   | ANALYST | 65000 |  4000 | 2024-05-20 | 30     |
+SELECT * FROM EMP ORDER BY HIREDATE LIMIT 2;
+DUPLICATE TABLE
+===================================================================
+DEPT1 FROM DEPT
+==============================================================
+CREATE TABLE DEPT1 AS SELECT * FROM DEPT;
+SELECT * FROM DEPT1;
+
+mysql> DESC DEPT;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DEPTNO | varchar(10) | NO   | PRI | NULL    |       |
+| DNAME  | varchar(25) | NO   |     | NULL    |       |
+| LOC    | varchar(25) | NO   |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> DESC DEPT1;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DEPTNO | varchar(10) | NO   |     | NULL    |       |
+| DNAME  | varchar(25) | NO   |     | NULL    |       |
+| LOC    | varchar(25) | NO   |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+mysql> SELECT * FROM DEPT1;
++--------+------------+---------+
+| DEPTNO | DNAME      | LOC     |
++--------+------------+---------+
+| 10     | MKTG       | KOLKATA |
+| 20     | FINANCE    | MUMBAI  |
+| 30     | IT         | DELHI   |
+| 40     | OPERATIONS | CHENNAI |
++--------+------------+---------+
+UPDATE
+================================
+UPDATE DEPT1 SET DNAME='PLANNING',LOC='BANGALORE' WHERE DEPTNO='40';
+SELECT * FROM DEPT1;
+mysql> SELECT * FROM DEPT1;
++--------+----------+-----------+
+| DEPTNO | DNAME    | LOC       |
++--------+----------+-----------+
+| 10     | MKTG     | KOLKATA   |
+| 20     | FINANCE  | MUMBAI    |
+| 30     | IT       | DELHI     |
+| 40     | PLANNING | BANGALORE |
++--------+----------+-----------+
+DELETE 
+===========================================
+DELETE FROM DEPT1 WHERE DEPTNO='40';
+SELECT * FROM DEPT1;
+mysql> SELECT * FROM DEPT1;
++--------+---------+---------+
+| DEPTNO | DNAME   | LOC     |
++--------+---------+---------+
+| 10     | MKTG    | KOLKATA |
+| 20     | FINANCE | MUMBAI  |
+| 30     | IT      | DELHI   |
++--------+---------+---------+
+==============================================================================================
+JOINING TABLE
+======================================================================================
+WHEN WE ARE FETCHING DATA FROM MULTIPLE TABLES
+TYPES JOINING
+=======================
+EQUI JOIN===COMMON DATA OF BOTH THE TABLES
+OUTER JOIN
+NON EQUI JOIN
+SELF JOIN
+=============================================================
+DESC EMP;
+DESC DEPT;
+mysql> DESC EMP;
++----------+---------------+------+-----+---------+-------+
+| Field    | Type          | Null | Key | Default | Extra |
++----------+---------------+------+-----+---------+-------+
+| EID      | varchar(10)   | NO   | PRI | NULL    |       |
+| ENAME    | varchar(25)   | NO   |     | NULL    |       |
+| JOB      | varchar(25)   | YES  |     | NULL    |       |
+| SAL      | decimal(10,0) | YES  |     | NULL    |       |
+| COMM     | decimal(10,0) | YES  |     | NULL    |       |
+| HIREDATE | date          | YES  |     | NULL    |       |
+| DEPTNO   | varchar(10)   | YES  |     | NULL    |       |
++----------+---------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> DESC DEPT;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DEPTNO | varchar(10) | NO   | PRI | NULL    |       |
+| DNAME  | varchar(25) | NO   |     | NULL    |       |
+| LOC    | varchar(25) | NO   |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+SELECT E.ENAME,E.JOB,E.SAL,D.DEPTNO,D.DNAME,D.LOC
+FROM EMP E,DEPT D
+WHERE E.DEPTNO=D.DEPTNO;
+SELECT E.ENAME,E.JOB,E.SAL,D.DEPTNO,D.DNAME,D.LOC
+FROM EMP E JOIN DEPT D ON(E.DEPTNO=D.DEPTNO);
+mysql> SELECT E.ENAME,E.JOB,E.SAL,D.DEPTNO,D.DNAME,D.LOC
+    -> FROM EMP E,DEPT D
+    -> WHERE E.DEPTNO=D.DEPTNO;
++---------+---------+-------+--------+---------+---------+
+| ENAME   | JOB     | SAL   | DEPTNO | DNAME   | LOC     |
++---------+---------+-------+--------+---------+---------+
+| SUMAN   | CLERK   | 25000 | 10     | MKTG    | KOLKATA |
+| ALOKE   | CLERK   | 27000 | 20     | FINANCE | MUMBAI  |
+| AYAN    | MANAGER | 50000 | 10     | MKTG    | KOLKATA |
+| JAYANTA | MANAGER | 80000 | 20     | FINANCE | MUMBAI  |
+| JYOTI   | ANALYST | 65000 | 30     | IT      | DELHI   |
+| RUPALI  | ANALYST | 60000 | 20     | FINANCE | MUMBAI  |
++---------+---------+-------+--------+---------+---------+
+6 rows in set (0.00 sec)
+VIEW 
+==============================================================
+LOGICAL STRUCTURE OF TABLE
+IT IS NOT STORED DATA.
+CREATE VIEW EMP_DEPT_VW
+AS
+SELECT E.ENAME,E.JOB,E.SAL,D.DEPTNO,D.DNAME,D.LOC
+FROM EMP E,DEPT D
+WHERE E.DEPTNO=D.DEPTNO;
+
+SELECT * FROM EMP_DEPT_VW;
+mysql> CREATE VIEW EMP_DEPT_VW
+    -> AS
+    -> SELECT E.ENAME,E.JOB,E.SAL,D.DEPTNO,D.DNAME,D.LOC
+    -> FROM EMP E,DEPT D
+    -> WHERE E.DEPTNO=D.DEPTNO;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> SELECT * FROM EMP_DEPT_VW;
++---------+---------+-------+--------+---------+---------+
+| ENAME   | JOB     | SAL   | DEPTNO | DNAME   | LOC     |
++---------+---------+-------+--------+---------+---------+
+| SUMAN   | CLERK   | 25000 | 10     | MKTG    | KOLKATA |
+| ALOKE   | CLERK   | 27000 | 20     | FINANCE | MUMBAI  |
+| AYAN    | MANAGER | 50000 | 10     | MKTG    | KOLKATA |
+| JAYANTA | MANAGER | 80000 | 20     | FINANCE | MUMBAI  |
+| JYOTI   | ANALYST | 65000 | 30     | IT      | DELHI   |
+| RUPALI  | ANALYST | 60000 | 20     | FINANCE | MUMBAI  |
++---------+---------+-------+--------+---------+---------+
+6 rows in set (0.02 sec)
+=================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
