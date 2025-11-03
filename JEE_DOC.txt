@@ -233,7 +233,7 @@ LIST OF INTERFACES
 Connection============Establish the connection
 Statement=============EXECUTE THE QUERY
 PreparedStatement===EXECUTE PRECOMPLED SQL STATEMENT
-CallableStatement=====EXECUTE PROCEDURE
+CallableStatement=====EXECUTE STORED PROCEDURE
 ResultSet=============STORE THE DATA INTO RESULTSET
 ResultSetmetaData=====DETAILSINFORMATION OF RESULTSET
 DatabaseMetaData
@@ -254,6 +254,7 @@ TYPE-III DRIVER
 TYPE-IV DRIVER==CALLED THIN DRIVER
 =====================================================================
 DATABASE:JEEDBSS
+USE JEEDBSS;
 CREATE TABLE PRODUCT
 (PID VARCHAR(10),
  PNAME VARCHAR(25) NOT NULL,
@@ -268,6 +269,13 @@ SELECT * FROM PRODUCT;
 STEPS OF COMMUNICATION
 =============================================================================
 STEP1.import java.sql.*;
+STEP2:REGISTER AND LOAD THE JDBC DRIVER
+STEP3:ESTABLISH THE CONNECTION
+STEP4:CREATE THE STATEMENT
+STEP5:EXECUTE THE STATEMENT
+STEP6.RETRIEVE DATA INTO RESULTSET
+STEP7:CLOSE THE STATEMENT AND CONNECTION
+===============================================================================
 
 
 
