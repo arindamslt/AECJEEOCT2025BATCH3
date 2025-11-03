@@ -276,6 +276,58 @@ STEP5:EXECUTE THE STATEMENT
 STEP6.RETRIEVE DATA INTO RESULTSET
 STEP7:CLOSE THE STATEMENT AND CONNECTION
 ===============================================================================
+DATE:03.11.2025
+================================================================================
+System.out.println(rs.getString(1)+"==>"+rs.getString(2)+"===>"
++rs.getDouble(3)+"===>"+rs.getDouble(4));
+public int get()
+{
+ return 
+}
+public Connection getConn()
+============================================================================
+JEE
+===================================
+JAVA ENTERPRISE EDITION
+==============================================
+TWO-TIER ACHITECTURE
+THREE TIER ARCHITECTURE
+n-TIER ARCHITECTURE
+==============================================
+SERVLET
+=====================================================
+SERVER SIDE ENVIRONMENT
+REQUEST RESPONSE ORITED PROGRAM
+IT IS ACT AS AN CONTROLLER
+SERVLET IS NOTHING BUT A JAVA CLASS
+import javax.servlet.*;
+import javax.servlet.http.*;
+SERVLET LIFE CYCLE
+===================================
+GET           VS             POST
+==============================================
+1.INSURED                  1.SECURED
+2.DATA EMBEDDED IN URL     2.DATA NOT EMBEDDED IN URL
+3.AMOUNT OF DATA           3.ANY DATA CAN BE SEND
+ SENDING RESTRICTED
+============================================================================
+
+SERVLET TO SERVLET COMMUNICATION
+======================================================================
+
+IMPLICIT OBJECTS
+=========================
+1.request
+2.response
+3.session
+4.application
+5.pageContext
+6.page
+7.jspWriter
+8.Exception
+9.out
+====================================
+
 
 
 
