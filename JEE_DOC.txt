@@ -235,8 +235,8 @@ Statement=============EXECUTE THE QUERY
 PreparedStatement===EXECUTE PRECOMPLED SQL STATEMENT
 CallableStatement=====EXECUTE STORED PROCEDURE
 ResultSet=============STORE THE DATA INTO RESULTSET
-ResultSetmetaData=====DETAILSINFORMATION OF RESULTSET
-DatabaseMetaData
+ResultSetmetaData=====DETAILS INFORMATION OF RESULTSET
+DatabaseMetaData===== DETAILS INFORMATION OF DATABASE
 CLASSES
 =======================
 DriverManager====REGISTER AND LOAD THE JDBC DRIVER
@@ -303,6 +303,16 @@ SERVLET IS NOTHING BUT A JAVA CLASS
 import javax.servlet.*;
 import javax.servlet.http.*;
 SERVLET LIFE CYCLE
+============================================================
+init()===service===destroy()
+protected void service(ServletRequest request,ServletReponse response)
+=============================================================================
+HIERARCHY OF SERVLET
+================================================
+GenericServlet
+HttpServlet
+Your Servlet
+
 ===================================
 GET           VS             POST
 ==============================================
@@ -314,6 +324,84 @@ GET           VS             POST
 
 SERVLET TO SERVLET COMMUNICATION
 ======================================================================
+SERVLET TO SERVLET COMMUNICATION HAS BEEN DONE BY MEANS OF RequestDispatcher Class
+===================================================================================
+
+DATE:04.11.2025
+====================================================================================
+JSP
+=========================================================
+JAVA SERVER PAGES
+IT IS USED FOR VIEW PURPOSE
+HTML===HTML SUPPORT ONLY HTML TAG
+JSP ==SUPPORT BOTH HTML TAG AND JAVA CODE
+JSP===HTML+JAVACODE
+JSP IS ANOTHER FORM OF SERVLET
+<%     %>====CALLED SCRIPTLET
+<%
+  int x=10;
+double y=25.5;
+%>
+PRIN T ANY JAVA CODE
+=========================================
+<%=X+Y%>
+<%= %>====EXPRESSION
+========================================
+LIFE CYCLE OF JSP
+=========================================
+jspinit()===jspservice()===jspdestroy()
+LIMITATION OF SERVLET
+==================================================================
+PrintWriter out;
+out.println("<table">);
+out.println("<tr">);
+
+Test.jsp===COMPILE===Test_jsp.java===compile===Test_jsp.class===o/p
+                      SERVLET
+
+PATH LOCATION WHERE JSP FILE CONVERTED INTO SERVLET
+========================================================================
+C:\JEETOCTBATCH3\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\work\Catalina
+\localhost\JSPDEMO\org\apache\jsp
+========================================================================
+JSP TO JSP COMMUNICATION
+===================================================================
+JSP ACTION TAG
+===================================================================
+<jsp:include>
+<jsp:forward>
+<jsp:param>
+<jsp:useBean>
+<jsp:setProperty>
+<jsp:getProperty>
+======================================================================
+<jsp:param>
+=======================================================================
+<jsp:forward>
+<jsp:param></jsp:param>
+</jsp:forward>
+=====================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 IMPLICIT OBJECTS
 =========================
