@@ -381,28 +381,17 @@ JSP ACTION TAG
 <jsp:param></jsp:param>
 </jsp:forward>
 =====================================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+SESSION MANAGEMENT
+=====================================================================
+SESSION MANAGEMENT CAN BE DONE BY
+====================================================
+1.URLREWRITTING
+2.COOKIES
+3.SESSION
+4.INPUT FROM HIDDEN FIELDS
+===============================================================
+EXCEPTION HANDELLING IN JSP PAGE
+===============================================================
 IMPLICIT OBJECTS
 =========================
 1.request
