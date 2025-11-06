@@ -406,6 +406,46 @@ IMPLICIT OBJECTS
 ====================================
 DATE:06.11.2025
 ===============================================================================
+DESIGN PATTERN
+==============================================================================
+WELL APPROVED SOLUTION
+MVC
+=============================================
+M===MODEL
+V===VIEW
+C==CONTROLLER
+==============================================
+DAO DTO DESIGN PATTERN BASED ON MVC
+DAO==DATA ACCESS OBJECT
+DTO===DATA TRANSFER OBJECT
+FOODAPP
+===================================================================
+TWO TYPES OF USER
+================================================
+ADMIN
+CLINT
+================================================
+STEP1
+=========================================
+DATABASE CREATION
+mysql> CREATE DATABASE FDBSS;
+Query OK, 1 row affected (0.03 sec)
+USE FDBSS;
+CREATE TABLE FOOD
+(FID  VARCHAR(10),
+ FNAME VARCHAR(25) NOT NULL,
+ PRICE  DECIMAL,
+ CONSTRAINT FOOD_FID_PK PRIMARY KEY(FID)
+);
+DESC FOOD;
+============================================================
+
+
+
+
+
+
+
 
 
 ==============================================================================
@@ -434,9 +474,11 @@ TABLE CODE
 DAY2===>DAY2_PRACTICAL
 BootstrapDemo2.html
 =======================================================
-
-
-
+FoodAddServe
+FoodDto===POJO CLASS GETTER() SETTER() METHOD WILL BE THERE
+ConnectionFactory
+FoodDao
+FoodDelServe
 
 
 
