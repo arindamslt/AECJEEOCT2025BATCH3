@@ -12,6 +12,24 @@ public class FoodDao {
 	private String insert_sql="insert into food values(?,?,?)";
 	private String delete_sql="delete from food where fid=?";
 	private String update_sql="update food set price=? where fid=?";
+	private String search_sql="select * from food where fid=?";
+	public ResultSet searchData(String fid)
+	{
+		 try
+		 {
+			 ConnectionFactory con=new ConnectionFactory();
+			  cn=con.getConn();
+			 ps=cn.prepareStatement(search_sql);
+			 ps.setString(1, fid);
+		     rs=ps.executeQuery();
+					    
+		 }
+		 catch(SQLException se)
+		 {
+			 se.printStackTrace();
+		 }
+		 return rs;
+	}
 	public ResultSet getData()
 	{
 	 try

@@ -75,3 +75,13 @@ POSTGRESQL
 org.postgresql.Driver
 jdbc:postgresql://localhost:5432/testdb","postgres", "123"
 ==============================================================
+TABLE WITH AUTO INCREMENT AND TODAY'S DATE IS DEFAULT TYPE
+================================================================
+CREATE TABLE ORDERDTLS
+     (OID  INT AUTO_INCREMENT,
+      FID  VARCHAR(10) NOT NULL,
+      ODT  DATE   DEFAULT (CURRENT_DATE()),
+      UNAME VARCHAR(15),
+     CONSTRAINT ORDERDTLS_OID_PK PRIMARY KEY(OID)
+     );
+===========================================================================

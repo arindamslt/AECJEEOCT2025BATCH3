@@ -479,6 +479,36 @@ FoodDto===POJO CLASS GETTER() SETTER() METHOD WILL BE THERE
 ConnectionFactory
 FoodDao
 FoodDelServe
+============================================================
+CREATE TABLE REGISTER
+(UNAME VARCHAR(15),
+ PASS  VARCHAR(10) NOT NULL,
+ NM    VARCHAR(25),
+ CONSTRAINT REGISTER_UNAME_PK PRIMARY KEY(UNAME)
+);
+DESC REGISTER;
+SHOW TABLES;
+=============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
