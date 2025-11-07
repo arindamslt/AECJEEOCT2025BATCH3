@@ -17,7 +17,7 @@
 		<div id="right">
 		<a href="FoodSearchClient.jsp">SEARCH FOOD</a> &nbsp;&nbsp;
 		<a href="foodListClient.jsp">FOOD LIST</a>
-		<a href="" target="_blank">ORDER FOOD</a> &nbsp;&nbsp;
+		<a href="OrderDetails.jsp" target="_blank">ORDER FOOD</a> &nbsp;&nbsp;
 		<a href="" target="_blank">BILLING</a> &nbsp;&nbsp;
 		
 		</div>
