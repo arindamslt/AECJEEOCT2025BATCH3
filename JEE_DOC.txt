@@ -493,6 +493,16 @@ DATE:07.11.2025
 ============================================================================
 CLIENT PART
 ============================================================================
+mysql> SELECT * FROM REGISTER  where uname='suman123' and pass='1234';
++----------+------+-------+
+| UNAME    | PASS | NM    |
++----------+------+-------+
+| suman123 | 1234 | SUMAN |
++----------+------+-------+
+1 row in set (0.00 sec)
+SELECT * FROM REGISTER  where uname='suman123' and pass='5678';
+SELECT * FROM REGISTER  where uname=? and pass=?;
+
 
 
 
